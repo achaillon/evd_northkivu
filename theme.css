@@ -1,0 +1,303 @@
+
+/* base variables */
+
+/* Edit the CSS properties in this file to create a custom
+   Distill theme. Only edit values in the right column
+   for each row; values shown are the CSS defaults.
+   To return any property to the default,
+   you may set its value to: unset
+   All rows must end with a semi-colon.                      */
+
+/* Optional: embed custom fonts here with `@import`          */
+/* This must remain at the top of this file.                 */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+  /*-- Main font sizes --*/
+  --title-size:      40px;
+  --body-size:       1.06rem;
+  --code-size:       14px;
+  --aside-size:      11px;
+  --fig-cap-size:    13px;
+  /*-- Main font colors --*/
+  --title-color:     #000000;
+  --header-color:    rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(0, 0, 0, 0.8);
+  --aside-color:     rgba(0, 0, 0, 0.6);
+  --fig-cap-color:   rgba(0, 0, 0, 0.6);
+  /*-- Specify custom fonts ~~~ must be imported above   --*/
+  --heading-font:     Roboto, sans-serif;
+  --mono-font:       'Roboto Mono', monospace;
+  --body-font:       'Lora', serif;
+  --navbar-font:     'Roboto', sans-serif;  /* websites + blogs only */
+}
+
+/*-- ARTICLE METADATA --*/
+d-byline {
+  --heading-size:    0.6rem;
+  --heading-color:   rgba(0, 0, 0, 0.5);
+  --body-size:       0.8rem;
+  --body-color:      rgba(0, 0, 0, 0.8);
+}
+
+/*-- ARTICLE TABLE OF CONTENTS --*/
+.d-contents {
+  --heading-size:    15px;
+  --contents-size:   13px;
+}
+
+/*-- ARTICLE APPENDIX --*/
+d-appendix {
+  --heading-size:    15px;
+  --heading-color:   rgba(0, 0, 0, 0.65);
+  --text-size:       0.8em;
+  --text-color:      rgba(0, 0, 0, 0.5);
+}
+
+/*-- WEBSITE HEADER + FOOTER --*/
+/* These properties only apply to Distill sites and blogs  */
+
+.distill-site-header {
+  --title-size:       20px;
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        16px;
+  --hover-color:      white;
+  --bkgd-color:       #2d516f;
+}
+
+.distill-site-footer {
+  --text-color:       rgba(255, 255, 255, 0.8);
+  --text-size:        15px;
+  --hover-color:      white;
+  --bkgd-color:       #2d516f;
+}
+
+/*-- Additional custom styles --*/
+/* Add any additional CSS rules below                      */
+
+
+aside {
+  font-family: Roboto, sans-serif !important;
+  line-height: 1.4em !important;
+}
+
+d-article h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.d-contents nav a {
+  font-family: Roboto, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.leaflet {
+  margin: auto;
+}
+
+.leaflet-container, .info {
+  font-family: 'IBM Plex Sans Condensed', sans-serif !important;
+  background: #FFF !important;
+}
+
+.panel-tab {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.distill-site-footer {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.index-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.index-row > div {
+  margin: 0 15px 0 15px;
+}
+
+.index-column-l {
+  flex: 40%;
+}
+
+.index-column-r {
+  flex: 60%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .index-row {
+    flex-direction: column !important;
+  }
+  .scatter-wide {
+    display: none !important;
+  }
+  .heat-desktop {
+    display: none !important;
+  }
+  .img-desktop {
+    display: none !important;
+  }  
+}
+
+@media only screen and (min-width: 1000px) {
+  .scatter-long {
+    display: none !important;
+  }
+  .heat-mobile {
+    display: none !important;
+  }
+  .img-mobile {
+    display: none !important;
+  }
+}
+
+.key-metric-t {
+  table-layout: fixed;
+  border-bottom: 0px !important;
+}
+
+.key-metric-t td:nth-of-type(1) {
+  width: 110px
+}
+
+.key-metric-t td:nth-of-type(2) {
+  width: 70px
+}
+
+.key-metric-t td:nth-of-type(3) {
+  width: 60px
+}
+
+.key-metric-t td:nth-of-type(3) {
+  width: 65px
+}
+
+@media only screen and (max-width: 600px) {
+  .key-metric-t td:nth-child(4), .key-metric-t th:nth-child(4) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .plotly .gtitle {
+    font-size: 15px !important;
+  }
+  
+  .plotly .xaxislayer-above text, .plotly .yaxislayer-above text  {
+    font-size: 10.5px !important;
+  }
+  
+}
+
+.t-left {
+  text-align: left;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 20px;
+  border-bottom: 0px !important;
+}
+
+.t-right {
+  text-align: right;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  border-bottom: 0px !important;
+}
+
+th.t-left, th.t-right {
+  font-size: 14px;
+  font-variant-caps: all-small-caps;
+  line-height: 1;
+  padding-bottom: 5px;
+  border-bottom: 0px !important;
+}
+
+.plotly a {
+  fill: rgba(0, 0, 0, 0.6) !important;
+  text-decoration: underline !important;
+  font-family: Roboto, sans-serif;
+  font-size: 11px;
+}
+
+.annotation-text {
+  fill: rgba(0, 0, 0, 0.6) !important;
+  font-family: Roboto, sans-serif!important;
+  font-size: 11px !important;
+}
+
+.dataTable caption {
+  caption-side: bottom !important;
+  text-align: right !important;
+  font-size: 11px;
+  margin-top: 7px;
+  font-family: Roboto, sans-serif;
+}
+
+.dataTable tbody, .dataTable th {
+  font-size: 15px !important;
+  color: #333 !important;
+  line-height: 1.7em !important;
+}
+
+.school-table td, .school-table th {
+  font-size: 13px !important;
+  color: #333 !important;
+  line-height: 1.4em !important;
+}
+
+.school-table th {
+  font-size: 13px !important;
+  line-height: 1em !important;
+}
+ 
+.dataTables_info, .dataTables_filter, .dtr-title, .dataTables_empty, .dataTable > thead {
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-variant-caps: all-small-caps !important;
+  border-bottom: 0px !important;
+}
+
+.dtr-data {
+  font-family: "Roboto Mono", monospace !important;
+}
+
+.recent-update, .d-contents nav h3 {
+  font-family: 'IBM Plex Sans' !important;
+  font-variant-caps: all-small-caps !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+#cases-slider {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.scatter-wide label {
+  font-family: Roboto, sans-serif;
+  font-variant-caps: all-small-caps;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.selectize-control {
+  font-family: "IBM Plex Sans", sans-serif !important;
+  width: 300px;
+}
+
+$unhcr-blue: #0072bc; 
+// text color
+.text-blue {
+  color: $unhcr-blue;
+}
+
