@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://antoine-evd.info/about.html</loc>
+    <lastmod>2025-11-07T10:08:05+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/cases.html</loc>
+    <lastmod>2025-11-07T10:39:28+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/cohort.html</loc>
+    <lastmod>2025-11-08T09:50:32+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/diagnosis.html</loc>
+    <lastmod>2025-11-08T07:48:30+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/</loc>
+    <lastmod>2025-11-08T09:54:51+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/pediatrics.html</loc>
+    <lastmod>2025-11-08T09:53:06+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/predictors.html</loc>
+    <lastmod>2025-11-07T14:51:18+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://antoine-evd.info/survival.html</loc>
+    <lastmod>2025-11-07T15:36:23+01:00</lastmod>
+  </url>
+</urlset>
