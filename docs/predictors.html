@@ -2827,8 +2827,8 @@ Independent predictors were quantified using <strong>Poisson regression</strong>
 <p>To analyze the predictors of EVD outcome and complications, we propose this <strong>Directed Acyclic Graphs (DAG)</strong><a href="#fig:diamonds1">1</a> to illustrate hypothesized causal relationships underlying <strong>EVD pathophysiology and clinical outcomes</strong>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span style="display:block;" id="fig:diamonds1"></span>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-516cc01b6135913b827d" style="width:624px;height:384px;"></div>
-<script type="application/json" data-for="htmlwidget-516cc01b6135913b827d">{"x":{"diagram":"\ndigraph flow {\n  graph [rankdir = TB, concentrate=true, splines=true]\n  node [shape=box, style=rounded, fontsize=12, fontname = \"Helvetica\", fixedsize=false]\n\n\n  # Nodes (grouped roughly to help positioning)\n  ImmuneMod [label = \"Immune\\nmodulation\", shape=box]\n  ViralLoad [label = \"Viral load\", shape=box]\n\n  DelDirect [label = \"Deleterious direct\\neffect of virus\", shape=box]\n  OrganFail [label = \"Organ\\nfailure\", shape=box, fontsize=14]\n  Death [label = \"Death\", shape=box]\n\n  PreExist [label = \"Pre-existing\\ncomorbidity\", shape=box]\n  Age [label = \"Age\", shape=box]\n  Sex [label = \"Sex\", shape=box]\n  Nutrition [label = \"Nutrition\", shape=box]\n  DelayedPres [label = \"Delayed\\npresentation\", shape=box]\n  Vaccination [label = \"Vaccination\", shape=box]\n  Antiviral [label = \"Antiviral\\ntherapy\", shape=box]\n  \n  \n  Hypoperf [label = \"Hypoperfusion /\\nshock\", shape=box]\n  Dehydration [label = \"Dehydration\", shape=box]\n  MetElect [label = \"Metabolic / electrolyte\\nderangement\", shape=box]\n  Hypoxa [label = \"Hypoxaemia\", shape=box]\n  Anemia [label = \"Anaemia\", shape=box]\n  SecInf [label = \"Secondary\\ninfection\", shape=box]\n  Bleeding [label = \"Bleeding\", shape=box]\n\n  ORS [label = \"ORS\", shape=box]\n  IVfluid [label = \"IV fluid\", shape=box]\n  Diarrhoea [label = \"Diarrhoea\", shape=box]\n\n  # layout hints using subgraphs to influence rank\n  { rank = same; Vaccination; Antiviral; DelayedPres }\n  { rank = same; ImmuneMod }\n  { rank = same; DelDirect }\n  { rank = same; OrganFail }\n  { rank = same; Death }\n\n  ViralLoad -> DelDirect [label = \"+\", fontsize=10]\n\n\n  # Edges (with + / - labels where your sketch indicates)\n  Vaccination -> ViralLoad [label = \"-\", fontsize=10]\n  Antiviral -> ViralLoad [label = \"-\", fontsize=10]\n  ImmuneMod -> DelDirect [label = \"+/-\", fontsize=10]\n\n  DelDirect -> OrganFail [label = \"+\", fontsize=10]\n  OrganFail -> Death [label = \"+\", fontsize=10]\n\n  # comorbidity, age, sex, nutrition -> organ failure (via pre-existing)\n  Sex -> PreExist [label = \"\", fontsize=10]\n  Age -> PreExist [label = \"+/-\", fontsize=10]\n  Nutrition -> PreExist [label = \"+\", fontsize=10]\n  DelayedPres -> ViralLoad [label = \"+\", fontsize=10]\n  PreExist -> OrganFail [label = \"+\", fontsize=10]\n  Sex -> DelayedPres [label = \"\", fontsize=10]\n\n  # shock / hypoperfusion connections\n  Hypoperf -> OrganFail [label = \"+\", fontsize=10]  # bidirectional influence\n\n  # dehydration, diarrhoea, ORS, IV fluid\n  Diarrhoea -> Dehydration [label = \"+\", fontsize=10]\n  ORS -> Dehydration [label = \"-\", fontsize=10]\n  IVfluid -> Dehydration [label = \"-\", fontsize=10]\n  Dehydration -> Hypoperf [label = \"+\", fontsize=10]\n  Dehydration -> MetElect [label = \"+\", fontsize=10]\n\n  # metabolic/electrolyte -> organ failure\n  MetElect -> OrganFail [label = \"+\", fontsize=10]\n\n  # hypoxaemia, anaemia, secondary infection, bleeding\n  Hypoxa -> OrganFail [label = \"+\", fontsize=10]\n  Anemia -> Hypoxa [label = \"+\", fontsize=10]\n  Bleeding -> Anemia [label = \"+\", fontsize=10]\n  SecInf -> Hypoxa [label = \"+\", fontsize=10]\n  SecInf -> OrganFail [label = \"+\", fontsize=10]\n\n  # dehydration <-> diarrhoea adds support to IV fluid negative/positive effects\n  IVfluid -> MetElect [label = \"-\", fontsize=10]\n\n  # small styling tweaks for emphasis\n  OrganFail [style = \"rounded,filled\", fillcolor = \"#f8d7da\"]\n  Death [style = \"rounded,filled\", fillcolor = \"#BF616A\"]\n\n  # edge arrows styling\n  edge [arrowsize=0.8]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-59a7e21467ba38e3b08d" style="width:624px;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-59a7e21467ba38e3b08d">{"x":{"diagram":"\ndigraph flow {\n  graph [rankdir = TB, concentrate=true, splines=true]\n  node [shape=box, style=rounded, fontsize=12, fontname = \"Helvetica\", fixedsize=false]\n\n\n  # Nodes (grouped roughly to help positioning)\n  ImmuneMod [label = \"Immune\\nmodulation\", shape=box]\n  ViralLoad [label = \"Viral load\", shape=box]\n\n  DelDirect [label = \"Deleterious direct\\neffect of virus\", shape=box]\n  OrganFail [label = \"Organ\\nfailure\", shape=box, fontsize=14]\n  Death [label = \"Death\", shape=box]\n\n  PreExist [label = \"Pre-existing\\ncomorbidity\", shape=box]\n  Age [label = \"Age\", shape=box]\n  Sex [label = \"Sex\", shape=box]\n  Nutrition [label = \"Nutrition\", shape=box]\n  DelayedPres [label = \"Delayed\\npresentation\", shape=box]\n  Vaccination [label = \"Vaccination\", shape=box]\n  Antiviral [label = \"Antiviral\\ntherapy\", shape=box]\n  \n  \n  Hypoperf [label = \"Hypoperfusion /\\nshock\", shape=box]\n  Dehydration [label = \"Dehydration\", shape=box]\n  MetElect [label = \"Metabolic / electrolyte\\nderangement\", shape=box]\n  Hypoxa [label = \"Hypoxaemia\", shape=box]\n  Anemia [label = \"Anaemia\", shape=box]\n  SecInf [label = \"Secondary\\ninfection\", shape=box]\n  Bleeding [label = \"Bleeding\", shape=box]\n\n  ORS [label = \"ORS\", shape=box]\n  IVfluid [label = \"IV fluid\", shape=box]\n  Diarrhoea [label = \"Diarrhoea\", shape=box]\n\n  # layout hints using subgraphs to influence rank\n  { rank = same; Vaccination; Antiviral; DelayedPres }\n  { rank = same; ImmuneMod }\n  { rank = same; DelDirect }\n  { rank = same; OrganFail }\n  { rank = same; Death }\n\n  ViralLoad -> DelDirect [label = \"+\", fontsize=10]\n\n\n  # Edges (with + / - labels where your sketch indicates)\n  Vaccination -> ViralLoad [label = \"-\", fontsize=10]\n  Antiviral -> ViralLoad [label = \"-\", fontsize=10]\n  ImmuneMod -> DelDirect [label = \"+/-\", fontsize=10]\n\n  DelDirect -> OrganFail [label = \"+\", fontsize=10]\n  OrganFail -> Death [label = \"+\", fontsize=10]\n\n  # comorbidity, age, sex, nutrition -> organ failure (via pre-existing)\n  Sex -> PreExist [label = \"\", fontsize=10]\n  Age -> PreExist [label = \"+/-\", fontsize=10]\n  Nutrition -> PreExist [label = \"+\", fontsize=10]\n  DelayedPres -> ViralLoad [label = \"+\", fontsize=10]\n  PreExist -> OrganFail [label = \"+\", fontsize=10]\n  Sex -> DelayedPres [label = \"\", fontsize=10]\n\n  # shock / hypoperfusion connections\n  Hypoperf -> OrganFail [label = \"+\", fontsize=10]  # bidirectional influence\n\n  # dehydration, diarrhoea, ORS, IV fluid\n  Diarrhoea -> Dehydration [label = \"+\", fontsize=10]\n  ORS -> Dehydration [label = \"-\", fontsize=10]\n  IVfluid -> Dehydration [label = \"-\", fontsize=10]\n  Dehydration -> Hypoperf [label = \"+\", fontsize=10]\n  Dehydration -> MetElect [label = \"+\", fontsize=10]\n\n  # metabolic/electrolyte -> organ failure\n  MetElect -> OrganFail [label = \"+\", fontsize=10]\n\n  # hypoxaemia, anaemia, secondary infection, bleeding\n  Hypoxa -> OrganFail [label = \"+\", fontsize=10]\n  Anemia -> Hypoxa [label = \"+\", fontsize=10]\n  Bleeding -> Anemia [label = \"+\", fontsize=10]\n  SecInf -> Hypoxa [label = \"+\", fontsize=10]\n  SecInf -> OrganFail [label = \"+\", fontsize=10]\n\n  # dehydration <-> diarrhoea adds support to IV fluid negative/positive effects\n  IVfluid -> MetElect [label = \"-\", fontsize=10]\n\n  # small styling tweaks for emphasis\n  OrganFail [style = \"rounded,filled\", fillcolor = \"#f8d7da\"]\n  Death [style = \"rounded,filled\", fillcolor = \"#BF616A\"]\n\n  # edge arrows styling\n  edge [arrowsize=0.8]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 1: Directed Acyclic Graphs (DAG)
 </p>
@@ -2837,23 +2837,23 @@ Figure 1: Directed Acyclic Graphs (DAG)
 <h3 id="proposed-grouping-of-variables">Proposed Grouping of Variables</h3>
 <p>To account for overlapping clinical features, we grouped similar symptoms into broader categories. This approach aimed to <span class="text-blue"><strong>increase model power and interpretability by reducing sparse variables</strong></span> while capturing clinically coherent syndromic patterns.</p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="rmabvrcpvt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rmabvrcpvt table {
+<div id="tqmxwwoila" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tqmxwwoila table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rmabvrcpvt thead, #rmabvrcpvt tbody, #rmabvrcpvt tfoot, #rmabvrcpvt tr, #rmabvrcpvt td, #rmabvrcpvt th {
+#tqmxwwoila thead, #tqmxwwoila tbody, #tqmxwwoila tfoot, #tqmxwwoila tr, #tqmxwwoila td, #tqmxwwoila th {
   border-style: none;
 }
 
-#rmabvrcpvt p {
+#tqmxwwoila p {
   margin: 0;
   padding: 0;
 }
 
-#rmabvrcpvt .gt_table {
+#tqmxwwoila .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2879,12 +2879,12 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-left-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_caption {
+#tqmxwwoila .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rmabvrcpvt .gt_title {
+#tqmxwwoila .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2896,7 +2896,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-bottom-width: 0;
 }
 
-#rmabvrcpvt .gt_subtitle {
+#tqmxwwoila .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2908,7 +2908,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-top-width: 0;
 }
 
-#rmabvrcpvt .gt_heading {
+#tqmxwwoila .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2920,13 +2920,13 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-right-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_bottom_border {
+#tqmxwwoila .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_col_headings {
+#tqmxwwoila .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2941,7 +2941,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-right-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_col_heading {
+#tqmxwwoila .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2961,7 +2961,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   overflow-x: hidden;
 }
 
-#rmabvrcpvt .gt_column_spanner_outer {
+#tqmxwwoila .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2973,15 +2973,15 @@ Figure 1: Directed Acyclic Graphs (DAG)
   padding-right: 4px;
 }
 
-#rmabvrcpvt .gt_column_spanner_outer:first-child {
+#tqmxwwoila .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rmabvrcpvt .gt_column_spanner_outer:last-child {
+#tqmxwwoila .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rmabvrcpvt .gt_column_spanner {
+#tqmxwwoila .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2993,11 +2993,11 @@ Figure 1: Directed Acyclic Graphs (DAG)
   width: 100%;
 }
 
-#rmabvrcpvt .gt_spanner_row {
+#tqmxwwoila .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rmabvrcpvt .gt_group_heading {
+#tqmxwwoila .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3023,7 +3023,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   text-align: left;
 }
 
-#rmabvrcpvt .gt_empty_group_heading {
+#tqmxwwoila .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3038,15 +3038,15 @@ Figure 1: Directed Acyclic Graphs (DAG)
   vertical-align: middle;
 }
 
-#rmabvrcpvt .gt_from_md > :first-child {
+#tqmxwwoila .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rmabvrcpvt .gt_from_md > :last-child {
+#tqmxwwoila .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rmabvrcpvt .gt_row {
+#tqmxwwoila .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -3065,7 +3065,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   overflow-x: hidden;
 }
 
-#rmabvrcpvt .gt_stub {
+#tqmxwwoila .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3078,7 +3078,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   padding-right: 5px;
 }
 
-#rmabvrcpvt .gt_stub_row_group {
+#tqmxwwoila .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3092,15 +3092,15 @@ Figure 1: Directed Acyclic Graphs (DAG)
   vertical-align: top;
 }
 
-#rmabvrcpvt .gt_row_group_first td {
+#tqmxwwoila .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rmabvrcpvt .gt_row_group_first th {
+#tqmxwwoila .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rmabvrcpvt .gt_summary_row {
+#tqmxwwoila .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3110,16 +3110,16 @@ Figure 1: Directed Acyclic Graphs (DAG)
   padding-right: 5px;
 }
 
-#rmabvrcpvt .gt_first_summary_row {
+#tqmxwwoila .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_first_summary_row.thick {
+#tqmxwwoila .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rmabvrcpvt .gt_last_summary_row {
+#tqmxwwoila .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -3129,7 +3129,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-bottom-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_grand_summary_row {
+#tqmxwwoila .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3139,7 +3139,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   padding-right: 5px;
 }
 
-#rmabvrcpvt .gt_first_grand_summary_row {
+#tqmxwwoila .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3149,7 +3149,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-top-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_last_grand_summary_row_top {
+#tqmxwwoila .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3159,11 +3159,11 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-bottom-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_striped {
+#tqmxwwoila .gt_striped {
   background-color: rgba(0, 114, 188, 0.2);
 }
 
-#rmabvrcpvt .gt_table_body {
+#tqmxwwoila .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3172,7 +3172,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-bottom-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_footnotes {
+#tqmxwwoila .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3186,7 +3186,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-right-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_footnote {
+#tqmxwwoila .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3195,7 +3195,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   padding-right: 5px;
 }
 
-#rmabvrcpvt .gt_sourcenotes {
+#tqmxwwoila .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3209,7 +3209,7 @@ Figure 1: Directed Acyclic Graphs (DAG)
   border-right-color: #D3D3D3;
 }
 
-#rmabvrcpvt .gt_sourcenote {
+#tqmxwwoila .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3217,72 +3217,72 @@ Figure 1: Directed Acyclic Graphs (DAG)
   padding-right: 5px;
 }
 
-#rmabvrcpvt .gt_left {
+#tqmxwwoila .gt_left {
   text-align: left;
 }
 
-#rmabvrcpvt .gt_center {
+#tqmxwwoila .gt_center {
   text-align: center;
 }
 
-#rmabvrcpvt .gt_right {
+#tqmxwwoila .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rmabvrcpvt .gt_font_normal {
+#tqmxwwoila .gt_font_normal {
   font-weight: normal;
 }
 
-#rmabvrcpvt .gt_font_bold {
+#tqmxwwoila .gt_font_bold {
   font-weight: bold;
 }
 
-#rmabvrcpvt .gt_font_italic {
+#tqmxwwoila .gt_font_italic {
   font-style: italic;
 }
 
-#rmabvrcpvt .gt_super {
+#tqmxwwoila .gt_super {
   font-size: 65%;
 }
 
-#rmabvrcpvt .gt_footnote_marks {
+#tqmxwwoila .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rmabvrcpvt .gt_asterisk {
+#tqmxwwoila .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rmabvrcpvt .gt_indent_1 {
+#tqmxwwoila .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rmabvrcpvt .gt_indent_2 {
+#tqmxwwoila .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rmabvrcpvt .gt_indent_3 {
+#tqmxwwoila .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rmabvrcpvt .gt_indent_4 {
+#tqmxwwoila .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rmabvrcpvt .gt_indent_5 {
+#tqmxwwoila .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rmabvrcpvt .katex-display {
+#tqmxwwoila .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rmabvrcpvt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tqmxwwoila div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3320,8 +3320,8 @@ With an <span class="text-blue"><strong>area under the curve (AUC)</strong></spa
 See <a href="#fig:diamonds">2</a> for the ROC curve visualization.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:diamonds"></span>
-<div class="plotly html-widget html-fill-item" id="htmlwidget-6ff5335ab01869b5ce8e" style="width:480px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-6ff5335ab01869b5ce8e">{"x":{"data":[{"x":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0052910052910053462,0.0052910052910053462,0.0052910052910053462,0.0052910052910053462,0.0052910052910053462,0.010582010582010581,0.010582010582010581,0.015873015873015928,0.015873015873015928,0.021164021164021163,0.03703703703703709,0.042328042328042326,0.042328042328042326,0.047619047619047672,0.052910052910052907,0.052910052910052907,0.058201058201058253,0.068783068783068835,0.068783068783068835,0.07407407407407407,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.095238095238095233,0.10052910052910058,0.10582010582010581,0.1164021164021164,0.1164021164021164,0.1164021164021164,0.12698412698412698,0.13227513227513232,0.14814814814814814,0.15343915343915349,0.16402116402116407,0.1693121693121693,0.1693121693121693,0.17460317460317465,0.17989417989417988,0.19047619047619047,0.20105820105820105,0.21164021164021163,0.21164021164021163,0.21693121693121697,0.21693121693121697,0.22222222222222221,0.23280423280423279,0.24867724867724872,0.25396825396825395,0.26984126984126988,0.27513227513227512,0.29100529100529104,0.30158730158730163,0.30687830687830686,0.31746031746031744,0.31746031746031744,0.32275132275132279,0.32804232804232802,0.33333333333333337,0.33862433862433861,0.34391534391534395,0.35449735449735453,0.36507936507936511,0.37037037037037035,0.38095238095238093,0.38624338624338628,0.40740740740740744,0.41269841269841268,0.41798941798941802,0.42328042328042326,0.42328042328042326,0.43386243386243384,0.43915343915343918,0.44444444444444442,0.44973544973544977,0.46560846560846558,0.47089947089947093,0.48148148148148151,0.48677248677248675,0.49206349206349209,0.49206349206349209,0.49735449735449733,0.50264550264550267,0.50793650793650791,0.52910052910052907,0.53968253968253976,0.53968253968253976,0.544973544973545,0.55026455026455023,0.57671957671957674,0.58201058201058209,0.59259259259259256,0.60317460317460325,0.60846560846560849,0.62433862433862441,0.62962962962962965,0.64021164021164023,0.65079365079365081,0.65608465608465605,0.66666666666666674,0.67195767195767198,0.67724867724867721,0.68253968253968256,0.6878306878306879,0.69841269841269837,0.70370370370370372,0.7142857142857143,0.72486772486772488,0.72486772486772488,0.73544973544973546,0.74603174603174605,0.75132275132275139,0.76190476190476186,0.77248677248677255,0.77777777777777779,0.78306878306878303,0.78835978835978837,0.79365079365079372,0.79894179894179895,0.80423280423280419,0.80952380952380953,0.81481481481481488,0.83597883597883604,0.84126984126984128,0.84656084656084651,0.85185185185185186,0.85714285714285721,0.86243386243386244,0.86772486772486768,0.87830687830687837,0.87830687830687837,0.8835978835978836,0.88888888888888884,0.89947089947089953,0.90476190476190477,0.91005291005291,0.91534391534391535,0.92063492063492069,0.92592592592592593,0.94708994708994709,0.95238095238095233,0.95767195767195767,0.97354497354497349,0.98412698412698418,0.98941798941798942,0.99470899470899465,1],"y":[0,0.0081967213114754103,0.016393442622950821,0.032786885245901641,0.05737704918032787,0.065573770491803282,0.073770491803278687,0.081967213114754092,0.11475409836065574,0.13934426229508196,0.14754098360655737,0.1721311475409836,0.18032786885245902,0.19672131147540983,0.20491803278688525,0.22950819672131148,0.24590163934426229,0.25409836065573771,0.26229508196721313,0.27049180327868855,0.28688524590163933,0.29508196721311475,0.30327868852459017,0.31147540983606559,0.32786885245901637,0.35245901639344263,0.36885245901639346,0.38524590163934425,0.38524590163934425,0.39344262295081966,0.4098360655737705,0.42622950819672129,0.45901639344262296,0.46721311475409838,0.49180327868852458,0.5,0.50819672131147542,0.52459016393442626,0.54918032786885251,0.56557377049180324,0.56557377049180324,0.58196721311475408,0.60655737704918034,0.61475409836065575,0.62295081967213117,0.63934426229508201,0.64754098360655743,0.65573770491803274,0.67213114754098358,0.67213114754098358,0.68852459016393441,0.68852459016393441,0.70491803278688525,0.70491803278688525,0.71311475409836067,0.71311475409836067,0.72950819672131151,0.73770491803278693,0.75409836065573765,0.75409836065573765,0.76229508196721307,0.76229508196721307,0.78688524590163933,0.78688524590163933,0.80327868852459017,0.81967213114754101,0.81967213114754101,0.81967213114754101,0.82786885245901642,0.83606557377049184,0.84426229508196726,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.86065573770491799,0.86065573770491799,0.86885245901639341,0.88524590163934425,0.88524590163934425,0.88524590163934425,0.88524590163934425,0.90163934426229508,0.91803278688524592,0.91803278688524592,0.91803278688524592,0.92622950819672134,0.93442622950819676,0.94262295081967218,0.94262295081967218,0.94262295081967218,0.95081967213114749,0.95081967213114749,0.95901639344262291,0.95901639344262291,0.95901639344262291,0.95901639344262291,0.95901639344262291,0.96721311475409832,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,1,1,1,1],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,114,188,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.5],"y":[0.5],"text":"AUC: 0.85","hovertext":"","textfont":{"size":11.338582677165356,"color":"rgba(26,26,26,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.25],"y":[0.90000000000000002],"text":"Ct Threshold: 23.25<br />Se: 0.79<br />Spe: 0.77","hovertext":"","textfont":{"size":11.338582677165356,"color":"rgba(0,101,179,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":31.940224159402241,"r":15.940224159402241,"b":45.748443337484439,"l":58.660024906600256},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(26,26,26,1)","family":"IBM Plex Sans Condensed","size":15.940224159402241},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505603,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(26,26,26,1)","family":"sans","size":12.911581569115818},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.43473338616551549,"zeroline":false,"anchor":"y","title":{"text":"False-positive rate","font":{"color":"rgba(102,102,102,1)","family":"sans","size":12.911581569115818}},"hoverformat":".2f","fixedrange":true},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505603,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(26,26,26,1)","family":"sans","size":12.911581569115818},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.43473338616551549,"zeroline":false,"anchor":"x","title":{"text":"True-positive rate","font":{"color":"rgba(102,102,102,1)","family":"sans","size":12.911581569115818}},"hoverformat":".2f","fixedrange":true},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(26,26,26,1)","family":"sans","size":14.346201743462018}},"hovermode":"x","barmode":"relative","hoverlabel":{"font":{"family":"IBM Plex Sans Condensed"},"align":"left"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"5f541d1222ca":{"x":{},"y":{},"type":"scatter"},"5f5411aa0aaf":{"x":{},"y":{}},"5f5432a37038":{"x":{},"y":{}}},"cur_data":"5f541d1222ca","visdat":{"5f541d1222ca":["function (y) ","x"],"5f5411aa0aaf":["function (y) ","x"],"5f5432a37038":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-5205805decaebfecbb05" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-5205805decaebfecbb05">{"x":{"data":[{"x":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0052910052910053462,0.0052910052910053462,0.0052910052910053462,0.0052910052910053462,0.0052910052910053462,0.010582010582010581,0.010582010582010581,0.015873015873015928,0.015873015873015928,0.021164021164021163,0.03703703703703709,0.042328042328042326,0.042328042328042326,0.047619047619047672,0.052910052910052907,0.052910052910052907,0.058201058201058253,0.068783068783068835,0.068783068783068835,0.07407407407407407,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.089947089947089998,0.095238095238095233,0.10052910052910058,0.10582010582010581,0.1164021164021164,0.1164021164021164,0.1164021164021164,0.12698412698412698,0.13227513227513232,0.14814814814814814,0.15343915343915349,0.16402116402116407,0.1693121693121693,0.1693121693121693,0.17460317460317465,0.17989417989417988,0.19047619047619047,0.20105820105820105,0.21164021164021163,0.21164021164021163,0.21693121693121697,0.21693121693121697,0.22222222222222221,0.23280423280423279,0.24867724867724872,0.25396825396825395,0.26984126984126988,0.27513227513227512,0.29100529100529104,0.30158730158730163,0.30687830687830686,0.31746031746031744,0.31746031746031744,0.32275132275132279,0.32804232804232802,0.33333333333333337,0.33862433862433861,0.34391534391534395,0.35449735449735453,0.36507936507936511,0.37037037037037035,0.38095238095238093,0.38624338624338628,0.40740740740740744,0.41269841269841268,0.41798941798941802,0.42328042328042326,0.42328042328042326,0.43386243386243384,0.43915343915343918,0.44444444444444442,0.44973544973544977,0.46560846560846558,0.47089947089947093,0.48148148148148151,0.48677248677248675,0.49206349206349209,0.49206349206349209,0.49735449735449733,0.50264550264550267,0.50793650793650791,0.52910052910052907,0.53968253968253976,0.53968253968253976,0.544973544973545,0.55026455026455023,0.57671957671957674,0.58201058201058209,0.59259259259259256,0.60317460317460325,0.60846560846560849,0.62433862433862441,0.62962962962962965,0.64021164021164023,0.65079365079365081,0.65608465608465605,0.66666666666666674,0.67195767195767198,0.67724867724867721,0.68253968253968256,0.6878306878306879,0.69841269841269837,0.70370370370370372,0.7142857142857143,0.72486772486772488,0.72486772486772488,0.73544973544973546,0.74603174603174605,0.75132275132275139,0.76190476190476186,0.77248677248677255,0.77777777777777779,0.78306878306878303,0.78835978835978837,0.79365079365079372,0.79894179894179895,0.80423280423280419,0.80952380952380953,0.81481481481481488,0.83597883597883604,0.84126984126984128,0.84656084656084651,0.85185185185185186,0.85714285714285721,0.86243386243386244,0.86772486772486768,0.87830687830687837,0.87830687830687837,0.8835978835978836,0.88888888888888884,0.89947089947089953,0.90476190476190477,0.91005291005291,0.91534391534391535,0.92063492063492069,0.92592592592592593,0.94708994708994709,0.95238095238095233,0.95767195767195767,0.97354497354497349,0.98412698412698418,0.98941798941798942,0.99470899470899465,1],"y":[0,0.0081967213114754103,0.016393442622950821,0.032786885245901641,0.05737704918032787,0.065573770491803282,0.073770491803278687,0.081967213114754092,0.11475409836065574,0.13934426229508196,0.14754098360655737,0.1721311475409836,0.18032786885245902,0.19672131147540983,0.20491803278688525,0.22950819672131148,0.24590163934426229,0.25409836065573771,0.26229508196721313,0.27049180327868855,0.28688524590163933,0.29508196721311475,0.30327868852459017,0.31147540983606559,0.32786885245901637,0.35245901639344263,0.36885245901639346,0.38524590163934425,0.38524590163934425,0.39344262295081966,0.4098360655737705,0.42622950819672129,0.45901639344262296,0.46721311475409838,0.49180327868852458,0.5,0.50819672131147542,0.52459016393442626,0.54918032786885251,0.56557377049180324,0.56557377049180324,0.58196721311475408,0.60655737704918034,0.61475409836065575,0.62295081967213117,0.63934426229508201,0.64754098360655743,0.65573770491803274,0.67213114754098358,0.67213114754098358,0.68852459016393441,0.68852459016393441,0.70491803278688525,0.70491803278688525,0.71311475409836067,0.71311475409836067,0.72950819672131151,0.73770491803278693,0.75409836065573765,0.75409836065573765,0.76229508196721307,0.76229508196721307,0.78688524590163933,0.78688524590163933,0.80327868852459017,0.81967213114754101,0.81967213114754101,0.81967213114754101,0.82786885245901642,0.83606557377049184,0.84426229508196726,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.85245901639344257,0.86065573770491799,0.86065573770491799,0.86885245901639341,0.88524590163934425,0.88524590163934425,0.88524590163934425,0.88524590163934425,0.90163934426229508,0.91803278688524592,0.91803278688524592,0.91803278688524592,0.92622950819672134,0.93442622950819676,0.94262295081967218,0.94262295081967218,0.94262295081967218,0.95081967213114749,0.95081967213114749,0.95901639344262291,0.95901639344262291,0.95901639344262291,0.95901639344262291,0.95901639344262291,0.96721311475409832,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.97540983606557374,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.98360655737704916,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,0.99180327868852458,1,1,1,1],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(0,114,188,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.5],"y":[0.5],"text":"AUC: 0.85","hovertext":"","textfont":{"size":11.338582677165356,"color":"rgba(26,26,26,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.25],"y":[0.90000000000000002],"text":"Ct Threshold: 23.25<br />Se: 0.79<br />Spe: 0.77","hovertext":"","textfont":{"size":11.338582677165356,"color":"rgba(0,101,179,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":31.940224159402241,"r":15.940224159402241,"b":45.748443337484439,"l":58.660024906600256},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(26,26,26,1)","family":"IBM Plex Sans Condensed","size":15.940224159402241},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505603,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(26,26,26,1)","family":"sans","size":12.911581569115818},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.43473338616551549,"zeroline":false,"anchor":"y","title":{"text":"False-positive rate","font":{"color":"rgba(102,102,102,1)","family":"sans","size":12.911581569115818}},"hoverformat":".2f","fixedrange":true},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.050000000000000003,1.05],"tickmode":"array","ticktext":["0.00","0.25","0.50","0.75","1.00"],"tickvals":[0,0.25,0.5,0.75,1],"categoryorder":"array","categoryarray":["0.00","0.25","0.50","0.75","1.00"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505603,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(26,26,26,1)","family":"sans","size":12.911581569115818},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(204,204,204,1)","gridwidth":0.43473338616551549,"zeroline":false,"anchor":"x","title":{"text":"True-positive rate","font":{"color":"rgba(102,102,102,1)","family":"sans","size":12.911581569115818}},"hoverformat":".2f","fixedrange":true},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(26,26,26,1)","family":"sans","size":14.346201743462018}},"hovermode":"x","barmode":"relative","hoverlabel":{"font":{"family":"IBM Plex Sans Condensed"},"align":"left"}},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"30407f282501":{"x":{},"y":{},"type":"scatter"},"30402495a5df":{"x":{},"y":{}},"30405cbce63c":{"x":{},"y":{}}},"cur_data":"30407f282501","visdat":{"30407f282501":["function (y) ","x"],"30402495a5df":["function (y) ","x"],"30405cbce63c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 2: ROC curve for predicting outcome
 </p>
@@ -3341,8 +3341,8 @@ Figure 2: ROC curve for predicting outcome
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span style="display:block;" id="fig:fig-stepwise"></span>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-aee9eb4d431b36614900" style="width:100%;height:384px;"></div>
-<script type="application/json" data-for="htmlwidget-aee9eb4d431b36614900">{"x":{"diagram":"\ndigraph workflow {\n  graph [layout = dot, rankdir = TB]\n  node [shape=box, style=rounded, fontsize=12, fontname=\"Helvetica\"]\n\n  A [label = \"1. Data cleaning and wrangling\"]\n  B [label = \"2. Univariate model screening\\n• Identify sparse variables\\n• Exclude predictors causing quasi-complete separation\"]\n  C [label = \"3. Collinearity assessment\\n• Variance Inflation Factor (VIF)\\n• GVIF_scaled ≤ 1.68\"]\n  D [label = \"4. LASSO regression\\n• Shrinks weak predictors\\n• Retains strongest associations\"]\n  E [label = \"5. Multivariable logistic regression\\n• Include LASSO-selected predictors\"]\n  F [label = \"OR from multivariable model\"]\n  G [label = \"Adjusted RR (Poisson)\"]\n  H [label = \"Raw RR for binary predictors\"]\n\n  A -> B -> C -> D -> E -> F\n  E -> G\n  E -> H\n  F [style=\"rounded,filled\", fillcolor=\"#f8d7da\"]\n  G [style=\"rounded,filled\", fillcolor=\"#f8d7da\"]\n  H [style=\"rounded,filled\", fillcolor=\"#f8d7da\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-0409d7fd8fe1251639ea" style="width:100%;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-0409d7fd8fe1251639ea">{"x":{"diagram":"\ndigraph workflow {\n  graph [layout = dot, rankdir = TB]\n  node [shape=box, style=rounded, fontsize=12, fontname=\"Helvetica\"]\n\n  A [label = \"1. Data cleaning and wrangling\"]\n  B [label = \"2. Univariate model screening\\n• Identify sparse variables\\n• Exclude predictors causing quasi-complete separation\"]\n  C [label = \"3. Collinearity assessment\\n• Variance Inflation Factor (VIF)\\n• GVIF_scaled ≤ 1.68\"]\n  D [label = \"4. LASSO regression\\n• Shrinks weak predictors\\n• Retains strongest associations\"]\n  E [label = \"5. Multivariable logistic regression\\n• Include LASSO-selected predictors\"]\n  F [label = \"OR from multivariable model\"]\n  G [label = \"Adjusted RR (Poisson)\"]\n  H [label = \"Raw RR for binary predictors\"]\n\n  A -> B -> C -> D -> E -> F\n  E -> G\n  E -> H\n  F [style=\"rounded,filled\", fillcolor=\"#f8d7da\"]\n  G [style=\"rounded,filled\", fillcolor=\"#f8d7da\"]\n  H [style=\"rounded,filled\", fillcolor=\"#f8d7da\"]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 </p>
@@ -3357,23 +3357,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <div class="panel">
 <p><span class="panel-name">Death Outcome</span></p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="jlndwbjasy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jlndwbjasy table {
+<div id="qeclvaofwl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qeclvaofwl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jlndwbjasy thead, #jlndwbjasy tbody, #jlndwbjasy tfoot, #jlndwbjasy tr, #jlndwbjasy td, #jlndwbjasy th {
+#qeclvaofwl thead, #qeclvaofwl tbody, #qeclvaofwl tfoot, #qeclvaofwl tr, #qeclvaofwl td, #qeclvaofwl th {
   border-style: none;
 }
 
-#jlndwbjasy p {
+#qeclvaofwl p {
   margin: 0;
   padding: 0;
 }
 
-#jlndwbjasy .gt_table {
+#qeclvaofwl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3399,12 +3399,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_caption {
+#qeclvaofwl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jlndwbjasy .gt_title {
+#qeclvaofwl .gt_title {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -3416,7 +3416,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#jlndwbjasy .gt_subtitle {
+#qeclvaofwl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3428,7 +3428,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#jlndwbjasy .gt_heading {
+#qeclvaofwl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3440,13 +3440,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_bottom_border {
+#qeclvaofwl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_col_headings {
+#qeclvaofwl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3461,7 +3461,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_col_heading {
+#qeclvaofwl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3481,7 +3481,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#jlndwbjasy .gt_column_spanner_outer {
+#qeclvaofwl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3493,15 +3493,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#jlndwbjasy .gt_column_spanner_outer:first-child {
+#qeclvaofwl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jlndwbjasy .gt_column_spanner_outer:last-child {
+#qeclvaofwl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jlndwbjasy .gt_column_spanner {
+#qeclvaofwl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3513,11 +3513,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#jlndwbjasy .gt_spanner_row {
+#qeclvaofwl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jlndwbjasy .gt_group_heading {
+#qeclvaofwl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3543,7 +3543,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#jlndwbjasy .gt_empty_group_heading {
+#qeclvaofwl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3558,15 +3558,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#jlndwbjasy .gt_from_md > :first-child {
+#qeclvaofwl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jlndwbjasy .gt_from_md > :last-child {
+#qeclvaofwl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jlndwbjasy .gt_row {
+#qeclvaofwl .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -3585,7 +3585,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#jlndwbjasy .gt_stub {
+#qeclvaofwl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3598,7 +3598,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#jlndwbjasy .gt_stub_row_group {
+#qeclvaofwl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3612,15 +3612,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#jlndwbjasy .gt_row_group_first td {
+#qeclvaofwl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jlndwbjasy .gt_row_group_first th {
+#qeclvaofwl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jlndwbjasy .gt_summary_row {
+#qeclvaofwl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3630,16 +3630,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#jlndwbjasy .gt_first_summary_row {
+#qeclvaofwl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_first_summary_row.thick {
+#qeclvaofwl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jlndwbjasy .gt_last_summary_row {
+#qeclvaofwl .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -3649,7 +3649,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_grand_summary_row {
+#qeclvaofwl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3659,7 +3659,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#jlndwbjasy .gt_first_grand_summary_row {
+#qeclvaofwl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3669,7 +3669,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_last_grand_summary_row_top {
+#qeclvaofwl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3679,11 +3679,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_striped {
+#qeclvaofwl .gt_striped {
   background-color: rgba(0, 114, 188, 0.2);
 }
 
-#jlndwbjasy .gt_table_body {
+#qeclvaofwl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3692,7 +3692,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_footnotes {
+#qeclvaofwl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3706,7 +3706,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_footnote {
+#qeclvaofwl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3715,7 +3715,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#jlndwbjasy .gt_sourcenotes {
+#qeclvaofwl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3729,7 +3729,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#jlndwbjasy .gt_sourcenote {
+#qeclvaofwl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3737,72 +3737,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#jlndwbjasy .gt_left {
+#qeclvaofwl .gt_left {
   text-align: left;
 }
 
-#jlndwbjasy .gt_center {
+#qeclvaofwl .gt_center {
   text-align: center;
 }
 
-#jlndwbjasy .gt_right {
+#qeclvaofwl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jlndwbjasy .gt_font_normal {
+#qeclvaofwl .gt_font_normal {
   font-weight: normal;
 }
 
-#jlndwbjasy .gt_font_bold {
+#qeclvaofwl .gt_font_bold {
   font-weight: bold;
 }
 
-#jlndwbjasy .gt_font_italic {
+#qeclvaofwl .gt_font_italic {
   font-style: italic;
 }
 
-#jlndwbjasy .gt_super {
+#qeclvaofwl .gt_super {
   font-size: 65%;
 }
 
-#jlndwbjasy .gt_footnote_marks {
+#qeclvaofwl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jlndwbjasy .gt_asterisk {
+#qeclvaofwl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jlndwbjasy .gt_indent_1 {
+#qeclvaofwl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jlndwbjasy .gt_indent_2 {
+#qeclvaofwl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jlndwbjasy .gt_indent_3 {
+#qeclvaofwl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jlndwbjasy .gt_indent_4 {
+#qeclvaofwl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jlndwbjasy .gt_indent_5 {
+#qeclvaofwl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jlndwbjasy .katex-display {
+#qeclvaofwl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jlndwbjasy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qeclvaofwl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3852,23 +3852,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <div class="panel">
 <p><span class="panel-name">Death Outcome among Treated</span></p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="mxczhlbrqm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mxczhlbrqm table {
+<div id="bylikwpvyo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bylikwpvyo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mxczhlbrqm thead, #mxczhlbrqm tbody, #mxczhlbrqm tfoot, #mxczhlbrqm tr, #mxczhlbrqm td, #mxczhlbrqm th {
+#bylikwpvyo thead, #bylikwpvyo tbody, #bylikwpvyo tfoot, #bylikwpvyo tr, #bylikwpvyo td, #bylikwpvyo th {
   border-style: none;
 }
 
-#mxczhlbrqm p {
+#bylikwpvyo p {
   margin: 0;
   padding: 0;
 }
 
-#mxczhlbrqm .gt_table {
+#bylikwpvyo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3894,12 +3894,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_caption {
+#bylikwpvyo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mxczhlbrqm .gt_title {
+#bylikwpvyo .gt_title {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -3911,7 +3911,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#mxczhlbrqm .gt_subtitle {
+#bylikwpvyo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3923,7 +3923,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#mxczhlbrqm .gt_heading {
+#bylikwpvyo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3935,13 +3935,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_bottom_border {
+#bylikwpvyo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_col_headings {
+#bylikwpvyo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3956,7 +3956,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_col_heading {
+#bylikwpvyo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3976,7 +3976,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#mxczhlbrqm .gt_column_spanner_outer {
+#bylikwpvyo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3988,15 +3988,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#mxczhlbrqm .gt_column_spanner_outer:first-child {
+#bylikwpvyo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mxczhlbrqm .gt_column_spanner_outer:last-child {
+#bylikwpvyo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mxczhlbrqm .gt_column_spanner {
+#bylikwpvyo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4008,11 +4008,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#mxczhlbrqm .gt_spanner_row {
+#bylikwpvyo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mxczhlbrqm .gt_group_heading {
+#bylikwpvyo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4038,7 +4038,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#mxczhlbrqm .gt_empty_group_heading {
+#bylikwpvyo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4053,15 +4053,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#mxczhlbrqm .gt_from_md > :first-child {
+#bylikwpvyo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mxczhlbrqm .gt_from_md > :last-child {
+#bylikwpvyo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mxczhlbrqm .gt_row {
+#bylikwpvyo .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -4080,7 +4080,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#mxczhlbrqm .gt_stub {
+#bylikwpvyo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4093,7 +4093,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mxczhlbrqm .gt_stub_row_group {
+#bylikwpvyo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4107,15 +4107,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#mxczhlbrqm .gt_row_group_first td {
+#bylikwpvyo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mxczhlbrqm .gt_row_group_first th {
+#bylikwpvyo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mxczhlbrqm .gt_summary_row {
+#bylikwpvyo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4125,16 +4125,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mxczhlbrqm .gt_first_summary_row {
+#bylikwpvyo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_first_summary_row.thick {
+#bylikwpvyo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mxczhlbrqm .gt_last_summary_row {
+#bylikwpvyo .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -4144,7 +4144,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_grand_summary_row {
+#bylikwpvyo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4154,7 +4154,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mxczhlbrqm .gt_first_grand_summary_row {
+#bylikwpvyo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4164,7 +4164,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_last_grand_summary_row_top {
+#bylikwpvyo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4174,11 +4174,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_striped {
+#bylikwpvyo .gt_striped {
   background-color: rgba(0, 114, 188, 0.2);
 }
 
-#mxczhlbrqm .gt_table_body {
+#bylikwpvyo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4187,7 +4187,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_footnotes {
+#bylikwpvyo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4201,7 +4201,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_footnote {
+#bylikwpvyo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4210,7 +4210,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mxczhlbrqm .gt_sourcenotes {
+#bylikwpvyo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4224,7 +4224,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mxczhlbrqm .gt_sourcenote {
+#bylikwpvyo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4232,72 +4232,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mxczhlbrqm .gt_left {
+#bylikwpvyo .gt_left {
   text-align: left;
 }
 
-#mxczhlbrqm .gt_center {
+#bylikwpvyo .gt_center {
   text-align: center;
 }
 
-#mxczhlbrqm .gt_right {
+#bylikwpvyo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mxczhlbrqm .gt_font_normal {
+#bylikwpvyo .gt_font_normal {
   font-weight: normal;
 }
 
-#mxczhlbrqm .gt_font_bold {
+#bylikwpvyo .gt_font_bold {
   font-weight: bold;
 }
 
-#mxczhlbrqm .gt_font_italic {
+#bylikwpvyo .gt_font_italic {
   font-style: italic;
 }
 
-#mxczhlbrqm .gt_super {
+#bylikwpvyo .gt_super {
   font-size: 65%;
 }
 
-#mxczhlbrqm .gt_footnote_marks {
+#bylikwpvyo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mxczhlbrqm .gt_asterisk {
+#bylikwpvyo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mxczhlbrqm .gt_indent_1 {
+#bylikwpvyo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mxczhlbrqm .gt_indent_2 {
+#bylikwpvyo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mxczhlbrqm .gt_indent_3 {
+#bylikwpvyo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mxczhlbrqm .gt_indent_4 {
+#bylikwpvyo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mxczhlbrqm .gt_indent_5 {
+#bylikwpvyo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mxczhlbrqm .katex-display {
+#bylikwpvyo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mxczhlbrqm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bylikwpvyo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4344,23 +4344,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <div class="panel">
 <p><span class="panel-name">Complications: Renal Failure</span></p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="yjpagjkmky" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yjpagjkmky table {
+<div id="kjzpcyaguf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kjzpcyaguf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yjpagjkmky thead, #yjpagjkmky tbody, #yjpagjkmky tfoot, #yjpagjkmky tr, #yjpagjkmky td, #yjpagjkmky th {
+#kjzpcyaguf thead, #kjzpcyaguf tbody, #kjzpcyaguf tfoot, #kjzpcyaguf tr, #kjzpcyaguf td, #kjzpcyaguf th {
   border-style: none;
 }
 
-#yjpagjkmky p {
+#kjzpcyaguf p {
   margin: 0;
   padding: 0;
 }
 
-#yjpagjkmky .gt_table {
+#kjzpcyaguf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4386,12 +4386,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_caption {
+#kjzpcyaguf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yjpagjkmky .gt_title {
+#kjzpcyaguf .gt_title {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -4403,7 +4403,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#yjpagjkmky .gt_subtitle {
+#kjzpcyaguf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4415,7 +4415,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#yjpagjkmky .gt_heading {
+#kjzpcyaguf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4427,13 +4427,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_bottom_border {
+#kjzpcyaguf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_col_headings {
+#kjzpcyaguf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4448,7 +4448,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_col_heading {
+#kjzpcyaguf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4468,7 +4468,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#yjpagjkmky .gt_column_spanner_outer {
+#kjzpcyaguf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4480,15 +4480,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#yjpagjkmky .gt_column_spanner_outer:first-child {
+#kjzpcyaguf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yjpagjkmky .gt_column_spanner_outer:last-child {
+#kjzpcyaguf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yjpagjkmky .gt_column_spanner {
+#kjzpcyaguf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4500,11 +4500,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#yjpagjkmky .gt_spanner_row {
+#kjzpcyaguf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yjpagjkmky .gt_group_heading {
+#kjzpcyaguf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4530,7 +4530,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#yjpagjkmky .gt_empty_group_heading {
+#kjzpcyaguf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4545,15 +4545,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#yjpagjkmky .gt_from_md > :first-child {
+#kjzpcyaguf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yjpagjkmky .gt_from_md > :last-child {
+#kjzpcyaguf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yjpagjkmky .gt_row {
+#kjzpcyaguf .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -4572,7 +4572,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#yjpagjkmky .gt_stub {
+#kjzpcyaguf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4585,7 +4585,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#yjpagjkmky .gt_stub_row_group {
+#kjzpcyaguf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4599,15 +4599,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#yjpagjkmky .gt_row_group_first td {
+#kjzpcyaguf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yjpagjkmky .gt_row_group_first th {
+#kjzpcyaguf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yjpagjkmky .gt_summary_row {
+#kjzpcyaguf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4617,16 +4617,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#yjpagjkmky .gt_first_summary_row {
+#kjzpcyaguf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_first_summary_row.thick {
+#kjzpcyaguf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yjpagjkmky .gt_last_summary_row {
+#kjzpcyaguf .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -4636,7 +4636,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_grand_summary_row {
+#kjzpcyaguf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4646,7 +4646,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#yjpagjkmky .gt_first_grand_summary_row {
+#kjzpcyaguf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4656,7 +4656,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_last_grand_summary_row_top {
+#kjzpcyaguf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4666,11 +4666,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_striped {
+#kjzpcyaguf .gt_striped {
   background-color: rgba(0, 114, 188, 0.2);
 }
 
-#yjpagjkmky .gt_table_body {
+#kjzpcyaguf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4679,7 +4679,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_footnotes {
+#kjzpcyaguf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4693,7 +4693,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_footnote {
+#kjzpcyaguf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4702,7 +4702,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#yjpagjkmky .gt_sourcenotes {
+#kjzpcyaguf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4716,7 +4716,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#yjpagjkmky .gt_sourcenote {
+#kjzpcyaguf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4724,72 +4724,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#yjpagjkmky .gt_left {
+#kjzpcyaguf .gt_left {
   text-align: left;
 }
 
-#yjpagjkmky .gt_center {
+#kjzpcyaguf .gt_center {
   text-align: center;
 }
 
-#yjpagjkmky .gt_right {
+#kjzpcyaguf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yjpagjkmky .gt_font_normal {
+#kjzpcyaguf .gt_font_normal {
   font-weight: normal;
 }
 
-#yjpagjkmky .gt_font_bold {
+#kjzpcyaguf .gt_font_bold {
   font-weight: bold;
 }
 
-#yjpagjkmky .gt_font_italic {
+#kjzpcyaguf .gt_font_italic {
   font-style: italic;
 }
 
-#yjpagjkmky .gt_super {
+#kjzpcyaguf .gt_super {
   font-size: 65%;
 }
 
-#yjpagjkmky .gt_footnote_marks {
+#kjzpcyaguf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yjpagjkmky .gt_asterisk {
+#kjzpcyaguf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yjpagjkmky .gt_indent_1 {
+#kjzpcyaguf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yjpagjkmky .gt_indent_2 {
+#kjzpcyaguf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yjpagjkmky .gt_indent_3 {
+#kjzpcyaguf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yjpagjkmky .gt_indent_4 {
+#kjzpcyaguf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yjpagjkmky .gt_indent_5 {
+#kjzpcyaguf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#yjpagjkmky .katex-display {
+#kjzpcyaguf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#yjpagjkmky div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kjzpcyaguf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4845,23 +4845,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <div class="panel">
 <p><span class="panel-name">Complications: Bleeding</span></p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="geaqpabufu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#geaqpabufu table {
+<div id="oviaojdeex" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oviaojdeex table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#geaqpabufu thead, #geaqpabufu tbody, #geaqpabufu tfoot, #geaqpabufu tr, #geaqpabufu td, #geaqpabufu th {
+#oviaojdeex thead, #oviaojdeex tbody, #oviaojdeex tfoot, #oviaojdeex tr, #oviaojdeex td, #oviaojdeex th {
   border-style: none;
 }
 
-#geaqpabufu p {
+#oviaojdeex p {
   margin: 0;
   padding: 0;
 }
 
-#geaqpabufu .gt_table {
+#oviaojdeex .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4887,12 +4887,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_caption {
+#oviaojdeex .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#geaqpabufu .gt_title {
+#oviaojdeex .gt_title {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -4904,7 +4904,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#geaqpabufu .gt_subtitle {
+#oviaojdeex .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4916,7 +4916,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#geaqpabufu .gt_heading {
+#oviaojdeex .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4928,13 +4928,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_bottom_border {
+#oviaojdeex .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_col_headings {
+#oviaojdeex .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4949,7 +4949,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_col_heading {
+#oviaojdeex .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4969,7 +4969,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#geaqpabufu .gt_column_spanner_outer {
+#oviaojdeex .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4981,15 +4981,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#geaqpabufu .gt_column_spanner_outer:first-child {
+#oviaojdeex .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#geaqpabufu .gt_column_spanner_outer:last-child {
+#oviaojdeex .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#geaqpabufu .gt_column_spanner {
+#oviaojdeex .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5001,11 +5001,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#geaqpabufu .gt_spanner_row {
+#oviaojdeex .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#geaqpabufu .gt_group_heading {
+#oviaojdeex .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5031,7 +5031,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#geaqpabufu .gt_empty_group_heading {
+#oviaojdeex .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5046,15 +5046,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#geaqpabufu .gt_from_md > :first-child {
+#oviaojdeex .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#geaqpabufu .gt_from_md > :last-child {
+#oviaojdeex .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#geaqpabufu .gt_row {
+#oviaojdeex .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -5073,7 +5073,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#geaqpabufu .gt_stub {
+#oviaojdeex .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5086,7 +5086,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#geaqpabufu .gt_stub_row_group {
+#oviaojdeex .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5100,15 +5100,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#geaqpabufu .gt_row_group_first td {
+#oviaojdeex .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#geaqpabufu .gt_row_group_first th {
+#oviaojdeex .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#geaqpabufu .gt_summary_row {
+#oviaojdeex .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5118,16 +5118,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#geaqpabufu .gt_first_summary_row {
+#oviaojdeex .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_first_summary_row.thick {
+#oviaojdeex .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#geaqpabufu .gt_last_summary_row {
+#oviaojdeex .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -5137,7 +5137,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_grand_summary_row {
+#oviaojdeex .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5147,7 +5147,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#geaqpabufu .gt_first_grand_summary_row {
+#oviaojdeex .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5157,7 +5157,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_last_grand_summary_row_top {
+#oviaojdeex .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5167,11 +5167,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_striped {
+#oviaojdeex .gt_striped {
   background-color: rgba(0, 114, 188, 0.2);
 }
 
-#geaqpabufu .gt_table_body {
+#oviaojdeex .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5180,7 +5180,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_footnotes {
+#oviaojdeex .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5194,7 +5194,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_footnote {
+#oviaojdeex .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5203,7 +5203,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#geaqpabufu .gt_sourcenotes {
+#oviaojdeex .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5217,7 +5217,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#geaqpabufu .gt_sourcenote {
+#oviaojdeex .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5225,72 +5225,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#geaqpabufu .gt_left {
+#oviaojdeex .gt_left {
   text-align: left;
 }
 
-#geaqpabufu .gt_center {
+#oviaojdeex .gt_center {
   text-align: center;
 }
 
-#geaqpabufu .gt_right {
+#oviaojdeex .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#geaqpabufu .gt_font_normal {
+#oviaojdeex .gt_font_normal {
   font-weight: normal;
 }
 
-#geaqpabufu .gt_font_bold {
+#oviaojdeex .gt_font_bold {
   font-weight: bold;
 }
 
-#geaqpabufu .gt_font_italic {
+#oviaojdeex .gt_font_italic {
   font-style: italic;
 }
 
-#geaqpabufu .gt_super {
+#oviaojdeex .gt_super {
   font-size: 65%;
 }
 
-#geaqpabufu .gt_footnote_marks {
+#oviaojdeex .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#geaqpabufu .gt_asterisk {
+#oviaojdeex .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#geaqpabufu .gt_indent_1 {
+#oviaojdeex .gt_indent_1 {
   text-indent: 5px;
 }
 
-#geaqpabufu .gt_indent_2 {
+#oviaojdeex .gt_indent_2 {
   text-indent: 10px;
 }
 
-#geaqpabufu .gt_indent_3 {
+#oviaojdeex .gt_indent_3 {
   text-indent: 15px;
 }
 
-#geaqpabufu .gt_indent_4 {
+#oviaojdeex .gt_indent_4 {
   text-indent: 20px;
 }
 
-#geaqpabufu .gt_indent_5 {
+#oviaojdeex .gt_indent_5 {
   text-indent: 25px;
 }
 
-#geaqpabufu .katex-display {
+#oviaojdeex .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#geaqpabufu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#oviaojdeex div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5345,23 +5345,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <span class="panel-name">Death Outcome</span>
 <div style="overflow-x:auto; overflow-y:auto; max-height:500px; max-width:100%; border:1px solid #ddd; padding:4px;">
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="mdbysmcgjy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mdbysmcgjy table {
+<div id="rzuifxuful" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rzuifxuful table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mdbysmcgjy thead, #mdbysmcgjy tbody, #mdbysmcgjy tfoot, #mdbysmcgjy tr, #mdbysmcgjy td, #mdbysmcgjy th {
+#rzuifxuful thead, #rzuifxuful tbody, #rzuifxuful tfoot, #rzuifxuful tr, #rzuifxuful td, #rzuifxuful th {
   border-style: none;
 }
 
-#mdbysmcgjy p {
+#rzuifxuful p {
   margin: 0;
   padding: 0;
 }
 
-#mdbysmcgjy .gt_table {
+#rzuifxuful .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5387,12 +5387,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_caption {
+#rzuifxuful .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mdbysmcgjy .gt_title {
+#rzuifxuful .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5404,7 +5404,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#mdbysmcgjy .gt_subtitle {
+#rzuifxuful .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5416,7 +5416,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#mdbysmcgjy .gt_heading {
+#rzuifxuful .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5428,13 +5428,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_bottom_border {
+#rzuifxuful .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_col_headings {
+#rzuifxuful .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5449,7 +5449,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_col_heading {
+#rzuifxuful .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5469,7 +5469,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#mdbysmcgjy .gt_column_spanner_outer {
+#rzuifxuful .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5481,15 +5481,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#mdbysmcgjy .gt_column_spanner_outer:first-child {
+#rzuifxuful .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mdbysmcgjy .gt_column_spanner_outer:last-child {
+#rzuifxuful .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mdbysmcgjy .gt_column_spanner {
+#rzuifxuful .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5501,11 +5501,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#mdbysmcgjy .gt_spanner_row {
+#rzuifxuful .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mdbysmcgjy .gt_group_heading {
+#rzuifxuful .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5531,7 +5531,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#mdbysmcgjy .gt_empty_group_heading {
+#rzuifxuful .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5546,15 +5546,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#mdbysmcgjy .gt_from_md > :first-child {
+#rzuifxuful .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mdbysmcgjy .gt_from_md > :last-child {
+#rzuifxuful .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mdbysmcgjy .gt_row {
+#rzuifxuful .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -5573,7 +5573,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#mdbysmcgjy .gt_stub {
+#rzuifxuful .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5586,7 +5586,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mdbysmcgjy .gt_stub_row_group {
+#rzuifxuful .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5600,15 +5600,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#mdbysmcgjy .gt_row_group_first td {
+#rzuifxuful .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mdbysmcgjy .gt_row_group_first th {
+#rzuifxuful .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mdbysmcgjy .gt_summary_row {
+#rzuifxuful .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5618,16 +5618,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mdbysmcgjy .gt_first_summary_row {
+#rzuifxuful .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_first_summary_row.thick {
+#rzuifxuful .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mdbysmcgjy .gt_last_summary_row {
+#rzuifxuful .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -5637,7 +5637,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_grand_summary_row {
+#rzuifxuful .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5647,7 +5647,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mdbysmcgjy .gt_first_grand_summary_row {
+#rzuifxuful .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5657,7 +5657,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_last_grand_summary_row_top {
+#rzuifxuful .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5667,11 +5667,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_striped {
+#rzuifxuful .gt_striped {
   background-color: rgba(0, 114, 188, 0.2);
 }
 
-#mdbysmcgjy .gt_table_body {
+#rzuifxuful .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5680,7 +5680,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_footnotes {
+#rzuifxuful .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5694,7 +5694,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_footnote {
+#rzuifxuful .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5703,7 +5703,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mdbysmcgjy .gt_sourcenotes {
+#rzuifxuful .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5717,7 +5717,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#mdbysmcgjy .gt_sourcenote {
+#rzuifxuful .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5725,72 +5725,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#mdbysmcgjy .gt_left {
+#rzuifxuful .gt_left {
   text-align: left;
 }
 
-#mdbysmcgjy .gt_center {
+#rzuifxuful .gt_center {
   text-align: center;
 }
 
-#mdbysmcgjy .gt_right {
+#rzuifxuful .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mdbysmcgjy .gt_font_normal {
+#rzuifxuful .gt_font_normal {
   font-weight: normal;
 }
 
-#mdbysmcgjy .gt_font_bold {
+#rzuifxuful .gt_font_bold {
   font-weight: bold;
 }
 
-#mdbysmcgjy .gt_font_italic {
+#rzuifxuful .gt_font_italic {
   font-style: italic;
 }
 
-#mdbysmcgjy .gt_super {
+#rzuifxuful .gt_super {
   font-size: 65%;
 }
 
-#mdbysmcgjy .gt_footnote_marks {
+#rzuifxuful .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mdbysmcgjy .gt_asterisk {
+#rzuifxuful .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mdbysmcgjy .gt_indent_1 {
+#rzuifxuful .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mdbysmcgjy .gt_indent_2 {
+#rzuifxuful .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mdbysmcgjy .gt_indent_3 {
+#rzuifxuful .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mdbysmcgjy .gt_indent_4 {
+#rzuifxuful .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mdbysmcgjy .gt_indent_5 {
+#rzuifxuful .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mdbysmcgjy .katex-display {
+#rzuifxuful .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mdbysmcgjy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rzuifxuful div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -5935,23 +5935,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <span class="panel-name">Death Outcome among Treated</span>
 <div style="overflow-x:auto; overflow-y:auto; max-height:500px; max-width:100%; border:1px solid #ddd; padding:4px;">
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="ydsifxladf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ydsifxladf table {
+<div id="ionibxmgsj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ionibxmgsj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ydsifxladf thead, #ydsifxladf tbody, #ydsifxladf tfoot, #ydsifxladf tr, #ydsifxladf td, #ydsifxladf th {
+#ionibxmgsj thead, #ionibxmgsj tbody, #ionibxmgsj tfoot, #ionibxmgsj tr, #ionibxmgsj td, #ionibxmgsj th {
   border-style: none;
 }
 
-#ydsifxladf p {
+#ionibxmgsj p {
   margin: 0;
   padding: 0;
 }
 
-#ydsifxladf .gt_table {
+#ionibxmgsj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5977,12 +5977,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_caption {
+#ionibxmgsj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ydsifxladf .gt_title {
+#ionibxmgsj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5994,7 +5994,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#ydsifxladf .gt_subtitle {
+#ionibxmgsj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -6006,7 +6006,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#ydsifxladf .gt_heading {
+#ionibxmgsj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -6018,13 +6018,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_bottom_border {
+#ionibxmgsj .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_col_headings {
+#ionibxmgsj .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6039,7 +6039,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_col_heading {
+#ionibxmgsj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6059,7 +6059,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#ydsifxladf .gt_column_spanner_outer {
+#ionibxmgsj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6071,15 +6071,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#ydsifxladf .gt_column_spanner_outer:first-child {
+#ionibxmgsj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ydsifxladf .gt_column_spanner_outer:last-child {
+#ionibxmgsj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ydsifxladf .gt_column_spanner {
+#ionibxmgsj .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6091,11 +6091,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#ydsifxladf .gt_spanner_row {
+#ionibxmgsj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ydsifxladf .gt_group_heading {
+#ionibxmgsj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6121,7 +6121,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#ydsifxladf .gt_empty_group_heading {
+#ionibxmgsj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6136,15 +6136,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#ydsifxladf .gt_from_md > :first-child {
+#ionibxmgsj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ydsifxladf .gt_from_md > :last-child {
+#ionibxmgsj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ydsifxladf .gt_row {
+#ionibxmgsj .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -6163,7 +6163,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#ydsifxladf .gt_stub {
+#ionibxmgsj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6176,7 +6176,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#ydsifxladf .gt_stub_row_group {
+#ionibxmgsj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6190,15 +6190,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#ydsifxladf .gt_row_group_first td {
+#ionibxmgsj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ydsifxladf .gt_row_group_first th {
+#ionibxmgsj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ydsifxladf .gt_summary_row {
+#ionibxmgsj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6208,16 +6208,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#ydsifxladf .gt_first_summary_row {
+#ionibxmgsj .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_first_summary_row.thick {
+#ionibxmgsj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ydsifxladf .gt_last_summary_row {
+#ionibxmgsj .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -6227,7 +6227,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_grand_summary_row {
+#ionibxmgsj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6237,7 +6237,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#ydsifxladf .gt_first_grand_summary_row {
+#ionibxmgsj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6247,7 +6247,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_last_grand_summary_row_top {
+#ionibxmgsj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6257,11 +6257,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_striped {
+#ionibxmgsj .gt_striped {
   background-color: rgba(143, 188, 187, 0.2);
 }
 
-#ydsifxladf .gt_table_body {
+#ionibxmgsj .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6270,7 +6270,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_footnotes {
+#ionibxmgsj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6284,7 +6284,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_footnote {
+#ionibxmgsj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6293,7 +6293,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#ydsifxladf .gt_sourcenotes {
+#ionibxmgsj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6307,7 +6307,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#ydsifxladf .gt_sourcenote {
+#ionibxmgsj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6315,72 +6315,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#ydsifxladf .gt_left {
+#ionibxmgsj .gt_left {
   text-align: left;
 }
 
-#ydsifxladf .gt_center {
+#ionibxmgsj .gt_center {
   text-align: center;
 }
 
-#ydsifxladf .gt_right {
+#ionibxmgsj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ydsifxladf .gt_font_normal {
+#ionibxmgsj .gt_font_normal {
   font-weight: normal;
 }
 
-#ydsifxladf .gt_font_bold {
+#ionibxmgsj .gt_font_bold {
   font-weight: bold;
 }
 
-#ydsifxladf .gt_font_italic {
+#ionibxmgsj .gt_font_italic {
   font-style: italic;
 }
 
-#ydsifxladf .gt_super {
+#ionibxmgsj .gt_super {
   font-size: 65%;
 }
 
-#ydsifxladf .gt_footnote_marks {
+#ionibxmgsj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ydsifxladf .gt_asterisk {
+#ionibxmgsj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ydsifxladf .gt_indent_1 {
+#ionibxmgsj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ydsifxladf .gt_indent_2 {
+#ionibxmgsj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ydsifxladf .gt_indent_3 {
+#ionibxmgsj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ydsifxladf .gt_indent_4 {
+#ionibxmgsj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ydsifxladf .gt_indent_5 {
+#ionibxmgsj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ydsifxladf .katex-display {
+#ionibxmgsj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ydsifxladf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ionibxmgsj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -6518,23 +6518,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <span class="panel-name">Complications: Renal Failure</span>
 <div style="overflow-x:auto; overflow-y:auto; max-height:500px; max-width:100%; border:1px solid #ddd; padding:4px;">
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="lfjvdypxbw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lfjvdypxbw table {
+<div id="vmzbtjdtwx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vmzbtjdtwx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lfjvdypxbw thead, #lfjvdypxbw tbody, #lfjvdypxbw tfoot, #lfjvdypxbw tr, #lfjvdypxbw td, #lfjvdypxbw th {
+#vmzbtjdtwx thead, #vmzbtjdtwx tbody, #vmzbtjdtwx tfoot, #vmzbtjdtwx tr, #vmzbtjdtwx td, #vmzbtjdtwx th {
   border-style: none;
 }
 
-#lfjvdypxbw p {
+#vmzbtjdtwx p {
   margin: 0;
   padding: 0;
 }
 
-#lfjvdypxbw .gt_table {
+#vmzbtjdtwx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -6560,12 +6560,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_caption {
+#vmzbtjdtwx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lfjvdypxbw .gt_title {
+#vmzbtjdtwx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -6577,7 +6577,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#lfjvdypxbw .gt_subtitle {
+#vmzbtjdtwx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -6589,7 +6589,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#lfjvdypxbw .gt_heading {
+#vmzbtjdtwx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -6601,13 +6601,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_bottom_border {
+#vmzbtjdtwx .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_col_headings {
+#vmzbtjdtwx .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6622,7 +6622,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_col_heading {
+#vmzbtjdtwx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6642,7 +6642,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#lfjvdypxbw .gt_column_spanner_outer {
+#vmzbtjdtwx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6654,15 +6654,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#lfjvdypxbw .gt_column_spanner_outer:first-child {
+#vmzbtjdtwx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lfjvdypxbw .gt_column_spanner_outer:last-child {
+#vmzbtjdtwx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lfjvdypxbw .gt_column_spanner {
+#vmzbtjdtwx .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -6674,11 +6674,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#lfjvdypxbw .gt_spanner_row {
+#vmzbtjdtwx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lfjvdypxbw .gt_group_heading {
+#vmzbtjdtwx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6704,7 +6704,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#lfjvdypxbw .gt_empty_group_heading {
+#vmzbtjdtwx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -6719,15 +6719,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#lfjvdypxbw .gt_from_md > :first-child {
+#vmzbtjdtwx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lfjvdypxbw .gt_from_md > :last-child {
+#vmzbtjdtwx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lfjvdypxbw .gt_row {
+#vmzbtjdtwx .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -6746,7 +6746,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#lfjvdypxbw .gt_stub {
+#vmzbtjdtwx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6759,7 +6759,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#lfjvdypxbw .gt_stub_row_group {
+#vmzbtjdtwx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -6773,15 +6773,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#lfjvdypxbw .gt_row_group_first td {
+#vmzbtjdtwx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lfjvdypxbw .gt_row_group_first th {
+#vmzbtjdtwx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lfjvdypxbw .gt_summary_row {
+#vmzbtjdtwx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6791,16 +6791,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#lfjvdypxbw .gt_first_summary_row {
+#vmzbtjdtwx .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_first_summary_row.thick {
+#vmzbtjdtwx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lfjvdypxbw .gt_last_summary_row {
+#vmzbtjdtwx .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -6810,7 +6810,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_grand_summary_row {
+#vmzbtjdtwx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -6820,7 +6820,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#lfjvdypxbw .gt_first_grand_summary_row {
+#vmzbtjdtwx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6830,7 +6830,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_last_grand_summary_row_top {
+#vmzbtjdtwx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -6840,11 +6840,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_striped {
+#vmzbtjdtwx .gt_striped {
   background-color: rgba(180, 142, 173, 0.2);
 }
 
-#lfjvdypxbw .gt_table_body {
+#vmzbtjdtwx .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -6853,7 +6853,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_footnotes {
+#vmzbtjdtwx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6867,7 +6867,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_footnote {
+#vmzbtjdtwx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -6876,7 +6876,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#lfjvdypxbw .gt_sourcenotes {
+#vmzbtjdtwx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -6890,7 +6890,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#lfjvdypxbw .gt_sourcenote {
+#vmzbtjdtwx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -6898,72 +6898,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#lfjvdypxbw .gt_left {
+#vmzbtjdtwx .gt_left {
   text-align: left;
 }
 
-#lfjvdypxbw .gt_center {
+#vmzbtjdtwx .gt_center {
   text-align: center;
 }
 
-#lfjvdypxbw .gt_right {
+#vmzbtjdtwx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lfjvdypxbw .gt_font_normal {
+#vmzbtjdtwx .gt_font_normal {
   font-weight: normal;
 }
 
-#lfjvdypxbw .gt_font_bold {
+#vmzbtjdtwx .gt_font_bold {
   font-weight: bold;
 }
 
-#lfjvdypxbw .gt_font_italic {
+#vmzbtjdtwx .gt_font_italic {
   font-style: italic;
 }
 
-#lfjvdypxbw .gt_super {
+#vmzbtjdtwx .gt_super {
   font-size: 65%;
 }
 
-#lfjvdypxbw .gt_footnote_marks {
+#vmzbtjdtwx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lfjvdypxbw .gt_asterisk {
+#vmzbtjdtwx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lfjvdypxbw .gt_indent_1 {
+#vmzbtjdtwx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lfjvdypxbw .gt_indent_2 {
+#vmzbtjdtwx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lfjvdypxbw .gt_indent_3 {
+#vmzbtjdtwx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lfjvdypxbw .gt_indent_4 {
+#vmzbtjdtwx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lfjvdypxbw .gt_indent_5 {
+#vmzbtjdtwx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lfjvdypxbw .katex-display {
+#vmzbtjdtwx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lfjvdypxbw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vmzbtjdtwx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -7131,23 +7131,23 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
 <span class="panel-name">Complications: Bleeding</span>
 <div style="overflow-x:auto; overflow-y:auto; max-height:500px; max-width:100%; border:1px solid #ddd; padding:4px;">
 <div class="layout-chunk" data-layout="l-body-outset">
-<div id="gqlmkcaagp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gqlmkcaagp table {
+<div id="rxrbvvkycz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rxrbvvkycz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gqlmkcaagp thead, #gqlmkcaagp tbody, #gqlmkcaagp tfoot, #gqlmkcaagp tr, #gqlmkcaagp td, #gqlmkcaagp th {
+#rxrbvvkycz thead, #rxrbvvkycz tbody, #rxrbvvkycz tfoot, #rxrbvvkycz tr, #rxrbvvkycz td, #rxrbvvkycz th {
   border-style: none;
 }
 
-#gqlmkcaagp p {
+#rxrbvvkycz p {
   margin: 0;
   padding: 0;
 }
 
-#gqlmkcaagp .gt_table {
+#rxrbvvkycz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -7173,12 +7173,12 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-left-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_caption {
+#rxrbvvkycz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gqlmkcaagp .gt_title {
+#rxrbvvkycz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -7190,7 +7190,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-width: 0;
 }
 
-#gqlmkcaagp .gt_subtitle {
+#rxrbvvkycz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -7202,7 +7202,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-width: 0;
 }
 
-#gqlmkcaagp .gt_heading {
+#rxrbvvkycz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -7214,13 +7214,13 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_bottom_border {
+#rxrbvvkycz .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_col_headings {
+#rxrbvvkycz .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7235,7 +7235,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_col_heading {
+#rxrbvvkycz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7255,7 +7255,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#gqlmkcaagp .gt_column_spanner_outer {
+#rxrbvvkycz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7267,15 +7267,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 4px;
 }
 
-#gqlmkcaagp .gt_column_spanner_outer:first-child {
+#rxrbvvkycz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gqlmkcaagp .gt_column_spanner_outer:last-child {
+#rxrbvvkycz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gqlmkcaagp .gt_column_spanner {
+#rxrbvvkycz .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -7287,11 +7287,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   width: 100%;
 }
 
-#gqlmkcaagp .gt_spanner_row {
+#rxrbvvkycz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gqlmkcaagp .gt_group_heading {
+#rxrbvvkycz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7317,7 +7317,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   text-align: left;
 }
 
-#gqlmkcaagp .gt_empty_group_heading {
+#rxrbvvkycz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -7332,15 +7332,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: middle;
 }
 
-#gqlmkcaagp .gt_from_md > :first-child {
+#rxrbvvkycz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gqlmkcaagp .gt_from_md > :last-child {
+#rxrbvvkycz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gqlmkcaagp .gt_row {
+#rxrbvvkycz .gt_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -7359,7 +7359,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   overflow-x: hidden;
 }
 
-#gqlmkcaagp .gt_stub {
+#rxrbvvkycz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7372,7 +7372,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#gqlmkcaagp .gt_stub_row_group {
+#rxrbvvkycz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -7386,15 +7386,15 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   vertical-align: top;
 }
 
-#gqlmkcaagp .gt_row_group_first td {
+#rxrbvvkycz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gqlmkcaagp .gt_row_group_first th {
+#rxrbvvkycz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gqlmkcaagp .gt_summary_row {
+#rxrbvvkycz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -7404,16 +7404,16 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#gqlmkcaagp .gt_first_summary_row {
+#rxrbvvkycz .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_first_summary_row.thick {
+#rxrbvvkycz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gqlmkcaagp .gt_last_summary_row {
+#rxrbvvkycz .gt_last_summary_row {
   padding-top: 3px;
   padding-bottom: 3px;
   padding-left: 5px;
@@ -7423,7 +7423,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_grand_summary_row {
+#rxrbvvkycz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -7433,7 +7433,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#gqlmkcaagp .gt_first_grand_summary_row {
+#rxrbvvkycz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7443,7 +7443,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-top-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_last_grand_summary_row_top {
+#rxrbvvkycz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -7453,11 +7453,11 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_striped {
+#rxrbvvkycz .gt_striped {
   background-color: rgba(191, 97, 106, 0.2);
 }
 
-#gqlmkcaagp .gt_table_body {
+#rxrbvvkycz .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -7466,7 +7466,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-bottom-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_footnotes {
+#rxrbvvkycz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -7480,7 +7480,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_footnote {
+#rxrbvvkycz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -7489,7 +7489,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#gqlmkcaagp .gt_sourcenotes {
+#rxrbvvkycz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -7503,7 +7503,7 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   border-right-color: #D3D3D3;
 }
 
-#gqlmkcaagp .gt_sourcenote {
+#rxrbvvkycz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -7511,72 +7511,72 @@ Figure 3: Stepwise Approach to Modeling Outcomes and Complications
   padding-right: 5px;
 }
 
-#gqlmkcaagp .gt_left {
+#rxrbvvkycz .gt_left {
   text-align: left;
 }
 
-#gqlmkcaagp .gt_center {
+#rxrbvvkycz .gt_center {
   text-align: center;
 }
 
-#gqlmkcaagp .gt_right {
+#rxrbvvkycz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gqlmkcaagp .gt_font_normal {
+#rxrbvvkycz .gt_font_normal {
   font-weight: normal;
 }
 
-#gqlmkcaagp .gt_font_bold {
+#rxrbvvkycz .gt_font_bold {
   font-weight: bold;
 }
 
-#gqlmkcaagp .gt_font_italic {
+#rxrbvvkycz .gt_font_italic {
   font-style: italic;
 }
 
-#gqlmkcaagp .gt_super {
+#rxrbvvkycz .gt_super {
   font-size: 65%;
 }
 
-#gqlmkcaagp .gt_footnote_marks {
+#rxrbvvkycz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gqlmkcaagp .gt_asterisk {
+#rxrbvvkycz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gqlmkcaagp .gt_indent_1 {
+#rxrbvvkycz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gqlmkcaagp .gt_indent_2 {
+#rxrbvvkycz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gqlmkcaagp .gt_indent_3 {
+#rxrbvvkycz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gqlmkcaagp .gt_indent_4 {
+#rxrbvvkycz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gqlmkcaagp .gt_indent_5 {
+#rxrbvvkycz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gqlmkcaagp .katex-display {
+#rxrbvvkycz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gqlmkcaagp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rxrbvvkycz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
